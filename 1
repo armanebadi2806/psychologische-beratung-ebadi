@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Psychologische Beratung Ebadi | Hamburg & Online</title>
+  <meta name="description" content="Psychologische Beratung bei belastenden Lebensabschnitten – online und mobil in/um Hamburg. In der Regel Erstgespräch innerhalb von 48 Stunden (je nach Auslastung). Deutsch, Persisch, Dari, Englisch." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph (Link-Vorschau) -->
+  <meta property="og:title" content="Psychologische Beratung Ebadi" />
+  <meta property="og:description" content="Psychologische Beratung bei belastenden Lebensabschnitten – online & mobil in/um Hamburg. Zeitnahe Gespräche, strukturierte Arbeitsweise, klinischer Hintergrund." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      /* Palette: klinisch-modern, aber warm */
+      --bg: #070b14;
+      --surface: rgba(255,255,255,0.06);
+      --surface2: rgba(255,255,255,0.09);
+      --line: rgba(255,255,255,0.14);
+
+      --text: #f3f6ff;
+      --muted: rgba(243,246,255,0.78);
+
+      --accent: #38bdf8;     /* cyan */
+      --accent2: #fbbf24;    /* amber */
+      --accent3: #34d399;    /* emerald */
+      --danger: #fb7185;     /* rose */
+
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: var(--font);
+      background: radial-gradient(1100px 700px at 12% 8%, rgba(56,189,248,.18), transparent 60%),
+                  radial-gradient(900px 600px at 90% 18%, rgba(251,191,36,.14), transparent 55%),
+                  radial-gradient(1200px 900px at 55% 120%, rgba(52,211,153,.12), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+    /* Top bar */
+    header{
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(7,11,20,.72);
+      backdrop-filter: blur(12px) saturate(130%);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+
+    /* UPDATED: brand container to include logo */
+    .brandWrap{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 260px;
+    }
+    .logo{
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
+    }
+
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      letter-spacing:.2px;
+    }
+    .brand strong{ font-weight: 760; }
+    .brand span{ font-size: 13px; color: var(--muted); }
+
+    .navlinks{
+      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .navlinks a{
+      color: var(--muted);
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 12px;
+    }
+    .navlinks a:hover{
+      color: var(--text);
+      text-decoration:none;
+      background: rgba(255,255,255,0.06);
+    }
+
+    /* Sections */
+    section{ padding: 56px 0; }
+    .divider{ border-top: 1px solid var(--line); }
+
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.8px;
+    }
+    h2{
+      margin: 0 0 14px;
+      font-size: 26px;
+      letter-spacing: -0.3px;
+    }
+    h3{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -0.2px;
+    }
+    p{ margin: 0 0 12px; }
+    .muted{ color: var(--muted); }
+
+    /* Cards */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.06));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .grid3{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+    @media (max-width: 980px){
+      .grid2,.grid3{ grid-template-columns: 1fr; }
+      .brandWrap{ min-width: unset; }
+      .logo{ width: 40px; height: 40px; }
+    }
+
+    /* Hero */
+    .hero{ padding: 64px 0 36px; }
+    .heroGrid{ display:grid; grid-template-columns: 1.25fr .75fr; gap: 20px; align-items: start; }
+    @media (max-width: 980px){ .heroGrid{ grid-template-columns: 1fr; } }
+
+    .badgeRow{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px; }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size: 13px;
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+    }
+    .dot{ width:10px; height:10px; border-radius:999px; background: var(--accent); box-shadow: 0 0 0 4px rgba(56,189,248,.18); }
+
+    .ctaRow{ display:flex; flex-wrap:wrap; gap: 12px; margin-top: 18px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-weight: 680;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      text-decoration: none;
+      transition: transform .05s ease, background .2s ease, border-color .2s ease;
+    }
+    .btn:hover{ text-decoration:none; background: rgba(255,255,255,0.08); }
+    .btn:active{ transform: translateY(1px); }
+    .btnPrimary{
+      background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(52,211,153,.85));
+      border-color: rgba(255,255,255,0.10);
+      color: #06111f;
+    }
+    .btnPrimary:hover{ background: linear-gradient(135deg, rgba(56,189,248,1), rgba(52,211,153,.95)); }
+    .btnAlt{
+      background: linear-gradient(135deg, rgba(251,191,36,.95), rgba(56,189,248,.25));
+      color: #07111f;
+      border-color: rgba(255,255,255,0.10);
+    }
+
+    .heroNote{
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* List styles */
+    ul{ margin: 10px 0 0 18px; padding: 0; }
+    li{ margin: 7px 0; }
+
+    /* Photo */
+    .profile{
+      display:flex; gap:14px; align-items:flex-start;
+    }
+    .portrait{
+      width: 96px; height: 96px; border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      background: rgba(255,255,255,0.06);
+      flex: 0 0 auto;
+    }
+
+    /* Pricing */
+    .price{
+      display:flex; align-items:flex-end; justify-content:space-between; gap: 14px; flex-wrap: wrap;
+      padding: 14px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      margin-top: 10px;
+    }
+    .price strong{ font-size: 22px; letter-spacing: -.2px; }
+    .price span{ color: var(--muted); font-size: 13px; }
+
+    /* FAQ */
+    details{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.05);
+    }
+    details + details{ margin-top: 10px; }
+    summary{
+      cursor:pointer;
+      font-weight: 680;
+      list-style: none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+
+    /* Safety box */
+    .safety{
+      border: 1px solid rgba(251,113,133,.40);
+      background: rgba(251,113,133,.08);
+      border-radius: 16px;
+      padding: 14px 14px;
+    }
+
+    /* Footer */
+    footer{
+      padding: 28px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Small helpers */
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .kicker .pill{
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(251,191,36,.10);
+      border: 1px solid rgba(251,191,36,.25);
+      color: rgba(255,255,255,.88);
+      font-size: 12px;
+    }
+
+    /* Anchor offset for sticky header */
+    [id]{ scroll-margin-top: 86px; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <!-- UPDATED: logo added -->
+      <div class="brandWrap">
+        <img class="logo" src="logo-ebadi.png" alt="Logo Psychologische Beratung Ebadi" />
+        <div class="brand">
+          <strong>Psychologische Beratung Ebadi</strong>
+          <span>Online · Mobil in und um Hamburg (mit Fahraufpreis)</span>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Navigation">
+        <a href="#angebot">Angebot</a>
+        <a href="#arbeitsweise">Arbeitsweise</a>
+        <a href="#preise">Preise</a>
+        <a href="#sprachen">Sprachen</a>
+        <a href="#ueber">Über mich</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="heroGrid">
+        <div>
+          <div class="kicker">
+            <span class="pill">Zeitnahes Erstgespräch</span>
+            <span>Professionell · strukturiert · vertraulich</span>
+          </div>
+
+          <h1>Statt monatelanger Wartezeiten: in der Regel ein Gespräch innerhalb von 48&nbsp;Stunden.</h1>
+          <p class="muted" style="max-width: 70ch;">
+            Psychologische Beratung für Menschen in herausfordernden Lebensabschnitten – online oder mobil in und um Hamburg.
+            Klarer Rahmen, klinisch fundierte Einordnung, alltagsnahe nächste Schritte.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="#kontakt">Termin anfragen</a>
+            <a class="btn btnAlt" href="#preise">Preise ansehen</a>
+            <a class="btn" href="#angebot">Angebot & Schwerpunkte</a>
+          </div>
+
+          <p class="heroNote">
+            *Zeitnahe Termine nach Verfügbarkeit. Keine Psychotherapie, keine Diagnostik, keine Behandlung psychischer Erkrankungen.
+          </p>
+
+          <div class="badgeRow" aria-label="Kurzprofil">
+            <span class="badge"><span class="dot"></span> Psychologe (M.Sc. i. A., klinischer Schwerpunkt)</span>
+            <span class="badge">Online · mobil (Hamburg + Umgebung)</span>
+            <span class="badge">Mehrsprachig</span>
+            <span class="badge">Auch Paarberatung</span>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>Wofür Menschen zu mir kommen</h3>
+          <ul class="muted">
+            <li>Überforderung, Stress, Erschöpfung / Burnout-nahe Belastungen</li>
+            <li>Depressive Symptome, Antriebslosigkeit, innere Leere</li>
+            <li>Angstsymptome, Grübeln, Anspannung</li>
+            <li>Belastungsreaktionen nach schwierigen Erfahrungen</li>
+            <li>Konflikte in Partnerschaft und Familie – auch interkulturell</li>
+          </ul>
+          <p class="muted" style="margin-top:12px;">
+            Ziel: Orientierung, Stabilisierung und ein klarer nächster Schritt – ohne unnötige Hürden.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="divider" id="angebot">
+      <h2>Angebot</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>Psychologische Beratung</h3>
+          <p class="muted">
+            Bei belastenden Lebenssituationen arbeite ich strukturiert: wir klären das Anliegen, ordnen die Situation ein,
+            reduzieren Überforderung und entwickeln konkrete Schritte für Alltag, Beziehung oder Entscheidungsfindung.
+          </p>
+          <ul class="muted">
+            <li>Stress, Erschöpfung, Überlastung</li>
+            <li>Depressive und ängstliche Symptome (nicht-akut)</li>
+            <li>Übergänge, Krisen, schwierige Entscheidungen</li>
+            <li>Belastungsreaktionen nach belastenden Erfahrungen</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Paar- und Familienberatung</h3>
+          <p class="muted">
+            Wenn Gespräche eskalieren, Rollen unklar werden oder Vertrauen belastet ist, schaffen wir wieder Struktur:
+            Kommunikationsmuster verstehen, Konflikte entschärfen, Vereinbarungen entwickeln.
+          </p>
+          <ul class="muted">
+            <li>Wiederkehrende Konflikte / Eskalationen</li>
+            <li>Abgrenzung, Erwartungen, Rollen</li>
+            <li>Familienkonflikte und Loyalitätsdynamiken</li>
+            <li>Interkulturelle Paardynamiken / Migrationsgeschichte</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Online & mobil (Hamburg)</h3>
+          <p class="muted">
+            Online-Gespräche sind für viele Anliegen sehr gut geeignet. Zusätzlich biete ich – nach Absprache –
+            mobile Termine in und um Hamburg an (mit Fahraufpreis).
+          </p>
+          <ul class="muted">
+            <li>Online per Video in geschütztem Rahmen</li>
+            <li>Mobile Besuche: Hamburg + Umgebung</li>
+            <li>Vertraulichkeit & klare Rahmenbedingungen</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <h3>Wichtiger Rahmen</h3>
+        <p class="muted">
+          Dieses Angebot ist <strong>psychologische Beratung</strong>. Es erfolgt <strong>keine Diagnostik</strong> und keine Behandlung psychischer Erkrankungen,
+          keine Verordnung von Medikamenten und kein Ersatz für ärztliche/psychotherapeutische Behandlung.
+          Wenn sich zeigt, dass eine Behandlung sinnvoll oder notwendig ist, unterstütze ich bei Orientierung und nächsten Schritten.
+        </p>
+      </div>
+    </section>
+
+    <section class="divider" id="arbeitsweise">
+      <h2>Arbeitsweise</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Strukturiert, klinisch fundiert, alltagsnah</h3>
+          <p class="muted">
+            Ich arbeite mit einem klaren Beratungsrahmen: Wir definieren gemeinsam das Ziel, ordnen Symptome und Belastungen ein
+            und bauen Schritt für Schritt Handlungsfähigkeit auf. Dabei kombiniere ich psychologische Gesprächsführung mit
+            einem pragmatischen Blick auf Alltag, Beziehungen und Ressourcen.
+          </p>
+          <ul class="muted">
+            <li><strong>Orientierung:</strong> Was passiert gerade – und warum?</li>
+            <li><strong>Stabilisierung:</strong> Entlastung, Struktur, Schlaf/Stress-Hebel</li>
+            <li><strong>Fokus:</strong> Wenige, wirksame Schritte statt Überforderung</li>
+            <li><strong>Transparenz:</strong> Wir klären Vorgehen und Rahmen offen</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Mehrsprachig & kultursensibel (wenn relevant)</h3>
+          <p class="muted">
+            Viele Belastungen werden durch Sprachbarrieren, fehlenden Zugang zu Versorgung oder kulturell geprägte Erwartungen verstärkt.
+            Wenn es für dein Anliegen wichtig ist, beziehen wir familiäre und kulturelle Kontexte gezielt mit ein – ohne Etikettierung.
+          </p>
+          <div class="safety" style="margin-top:12px;">
+            <strong>Hinweis zu Dolmetschen:</strong>
+            <div class="muted" style="margin-top:6px;">
+              Arabisch und Türkisch sind mit Dolmetscher möglich. Die Kosten für Dolmetschen trägt der/die Klient:in exklusiv.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="divider" id="preise">
+      <h2>Preise</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Einzelgespräch</h3>
+          <p class="muted">Psychologische Beratung (50 Minuten)</p>
+          <div class="price">
+            <strong>85 €</strong>
+            <span>Erst- und Folgetermin (gleicher Preis)</span>
+          </div>
+          <p class="muted" style="margin-top:12px;">
+            Selbstzahlerleistung. Keine Abrechnung über gesetzliche Krankenkassen.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Paar- & Familienberatung</h3>
+          <p class="muted">Gemeinsames Gespräch (75 Minuten)</p>
+          <div class="price">
+            <strong>120 €</strong>
+            <span>pro Termin</span>
+          </div>
+          <p class="muted" style="margin-top:12px;">
+            Interkulturelle Paardynamiken / Migrationsgeschichte können – wenn relevant – ausdrücklich einbezogen werden.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <h3>Mobil in und um Hamburg</h3>
+        <p class="muted">
+          Mobile Besuche sind nach Absprache möglich. Es fällt ein <strong>Fahraufpreis</strong> an, abhängig von Entfernung und Zeit.
+          (Der genaue Aufpreis wird vorab transparent mitgeteilt.)
+        </p>
+      </div>
+    </section>
+
+    <section class="divider" id="sprachen">
+      <h2>Sprachen</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Direkt möglich</h3>
+          <ul class="muted">
+            <li>Deutsch</li>
+            <li>Persisch</li>
+            <li>Dari</li>
+            <li>Englisch</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Mit Dolmetscher</h3>
+          <ul class="muted">
+            <li>Arabisch (Dolmetscher, Kosten durch Klient:in)</li>
+            <li>Türkisch (Dolmetscher, Kosten durch Klient:in)</li>
+          </ul>
+          <p class="muted" style="margin-top:10px;">
+            Wenn du unsicher bist, welche Sprache für dich passt: schreib es einfach in die Anfrage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="divider" id="ueber">
+      <h2>Über mich</h2>
+      <div class="grid2">
+        <div class="card">
+          <div class="profile">
+            <img class="portrait" src="arman-ebadi.jpg" alt="Portrait Arman Ebadi" />
+            <div>
+              <h3 style="margin-top:0;">Arman Ebadi</h3>
+              <p class="muted" style="margin-bottom:0;">
+                Psychologe · Masterstudium Psychologie (klinischer Schwerpunkt) kurz vor Abschluss
+              </p>
+            </div>
+          </div>
+
+          <p class="muted" style="margin-top:14px;">
+            Ich bin Psychologe und befinde mich am Ende meines Masterstudiums in Psychologie mit Schwerpunkt klinische Psychologie.
+            Ich habe in klinischen Settings – ambulant und stationär – mit Menschen gearbeitet, die unterschiedliche psychische Belastungen
+            und Störungsbilder erlebt haben. Diese Erfahrung prägt meine Arbeitsweise: ruhig, strukturiert, fachlich fundiert.
+          </p>
+
+          <p class="muted">
+            Ein besonderer Schwerpunkt meiner Erfahrung liegt in der Arbeit mit geflüchteten Menschen und Menschen mit Migrationsgeschichte.
+            Ich sehe hier eine klare Versorgungslücke: fehlender Zugang, Sprachbarrieren, Unsicherheit im System – und gleichzeitig sehr lange Wartezeiten.
+            Auch in meiner eigenen Familie gibt es Fluchterfahrung. Ich weiß, wie sehr ein niedrigschwelliger, professioneller Zugang helfen kann –
+            bevor Belastungen chronisch werden.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Was du erwarten kannst</h3>
+          <ul class="muted">
+            <li><strong>Professioneller Rahmen:</strong> Klarer Ablauf, transparente Ziele, Vertraulichkeit</li>
+            <li><strong>Klinischer Blick:</strong> Einordnung von Symptomen und Belastungen ohne unnötige Pathologisierung</li>
+            <li><strong>Struktur statt Floskeln:</strong> Keine Coaching-Rhetorik, sondern konkrete psychologische Arbeit</li>
+            <li><strong>Kultursensibilität:</strong> Kontext wird berücksichtigt, wenn er relevant ist</li>
+            <li><strong>Verantwortung:</strong> Wenn Behandlung nötig ist, unterstütze ich bei Orientierung/Weiterleitung</li>
+          </ul>
+
+          <div class="card" style="margin-top:14px; background: rgba(56,189,248,0.08); border-color: rgba(56,189,248,0.25); box-shadow:none;">
+            <h3 style="margin:0 0 8px;">Versorgungslücke schließen – pragmatisch</h3>
+            <p class="muted" style="margin:0;">
+              Mein Anspruch ist ein schneller, professioneller Zugang: Ein Gespräch zur richtigen Zeit kann entlasten,
+              Orientierung geben und verhindern, dass Probleme unnötig eskalieren.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="divider" id="faq">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>Ist das Psychotherapie?</summary>
+        <p class="muted" style="margin-top:10px;">
+          Nein. Es handelt sich um psychologische Beratung. Es erfolgt keine Diagnostik und keine Behandlung psychischer Erkrankungen.
+          Bei Bedarf unterstütze ich dabei, passende nächste Schritte im Versorgungssystem zu finden.
+        </p>
+      </details>
+
+      <details>
+        <summary>„Innerhalb von 48 Stunden“ – gilt das immer?</summary>
+        <p class="muted" style="margin-top:10px;">
+          In der Regel ja, abhängig von Auslastung und Terminwünschen. Wenn es einmal länger dauern sollte, kommuniziere ich das transparent.
+        </p>
+      </details>
+
+      <details>
+        <summary>Wie läuft die Online-Beratung ab?</summary>
+        <p class="muted" style="margin-top:10px;">
+          Du bekommst nach Terminvereinbarung einen Link. Wichtig sind ein ruhiger Ort, stabile Internetverbindung und ein ungestörter Rahmen.
+        </p>
+      </details>
+
+      <details>
+        <summary>Kann ich auch mit Partner:in oder Familienmitglied kommen?</summary>
+        <p class="muted" style="margin-top:10px;">
+          Ja. Gemeinsame Gespräche sind möglich (75 Minuten). Das Setting wird vorab kurz geklärt, damit es zielorientiert bleibt.
+        </p>
+      </details>
+
+      <details>
+        <summary>Was ist bei akuten Krisen?</summary>
+        <p class="muted" style="margin-top:10px;">
+          Bei akuter Selbst- oder Fremdgefährdung wende dich bitte an den Notruf <strong>112</strong> oder den ärztlichen Bereitschaftsdienst <strong>116117</strong>.
+          TelefonSeelsorge: <strong>0800 1110111</strong> / <strong>0800 1110222</strong> / <strong>116 123</strong>.
+        </p>
+      </details>
+    </section>
+
+    <section class="divider" id="kontakt">
+      <h2>Kontakt / Termin anfragen</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>So fragst du an (kurz)</h3>
+          <p class="muted">Schreibe bitte 2–3 Sätze zu:</p>
+          <ul class="muted">
+            <li>Worum geht es gerade?</li>
+            <li>Einzelgespräch oder Paar/Familie?</li>
+            <li>Sprache(n) bevorzugt?</li>
+            <li>2–3 Zeitfenster (z. B. Mo/Di/Do ab 17 Uhr)</li>
+          </ul>
+
+          <div class="ctaRow" style="margin-top:14px;">
+            <a class="btn btnPrimary" href="mailto:ebadiarman11@gmail.com?subject=Terminanfrage%20Psychologische%20Beratung%20Ebadi&body=Hallo%20Herr%20Ebadi%2C%0A%0AAnliegen%3A%20...%0AFormat%20(Einzel%2FPaar)%3A%20...%0ASprache%3A%20...%0AZeitfenster%3A%20...%0A%0AViele%20Gr%C3%BC%C3%9Fe%0A">
+              E-Mail schreiben
+            </a>
+            <a class="btn" href="#preise">Preise</a>
+          </div>
+
+          <p class="muted" style="margin-top:12px;">
+            Kontakt: <strong>ebadiarman11@gmail.com</strong><br/>
+            Einsatz: Online · mobile Besuche Hamburg + Umgebung (mit Fahraufpreis)
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Rechtlicher Hinweis</h3>
+          <p class="muted">
+            Dieses Angebot ist psychologische Beratung. Es ersetzt keine Psychotherapie und keine medizinische Behandlung.
+            Es erfolgt keine Diagnostik und keine Behandlung psychischer Erkrankungen.
+          </p>
+
+          <div class="safety" style="margin-top:12px;">
+            <strong>Notfall:</strong>
+            <div class="muted" style="margin-top:6px;">
+              Bei akuter Gefahr: <strong>112</strong> · Bereitschaftsdienst: <strong>116117</strong> · TelefonSeelsorge: <strong>116 123</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <h3>Impressum & Datenschutz</h3>
+        <p class="muted" style="margin-bottom:6px;">
+          <strong>Arman Ebadi</strong><br/>
+          Graumannsstieg 7e<br/>
+          22885 Barsbüttel<br/>
+          E-Mail: <strong>ebadiarman11@gmail.com</strong>
+        </p>
+        <p class="muted">
+          <strong>Datenschutz (Kurzinfo):</strong> Wenn du per E-Mail Kontakt aufnimmst, werden die von dir übermittelten Daten
+          ausschließlich zur Bearbeitung deiner Anfrage genutzt. Es werden auf dieser Seite keine Tracking-Tools eingesetzt.
+          (Wenn du später ein Kontaktformular oder Analytics willst, sollte die Datenschutzerklärung entsprechend ergänzt werden.)
+        </p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="y"></span> Psychologische Beratung Ebadi</div>
+    <div style="margin-top:6px;">
+      <span class="muted">Hinweis: Beratung ohne Diagnostik und ohne Behandlung psychischer Erkrankungen.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
